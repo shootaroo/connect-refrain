@@ -3,6 +3,12 @@ module.exports = function (options) {
   var refrain = require('refrain')(options);
   return function (req, res, next) {
     var file = refrain.find(req.url);
-    file ? res.end(refrain.render(file)) : next();
+    if (file) {
+      refrain.render(file, null, function (err, output) {
+        res.end(output);
+      });
+    } else {
+      next();
+    }
   };
 };

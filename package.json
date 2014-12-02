@@ -16,6 +16,6 @@
     "url": "git://github.com/shootaroo/connect-refrain.git"
   },
   "dependencies": {
-    "refrain": "^0.0.1"
+    "refrain": "^0.0.3"
   }
 }
