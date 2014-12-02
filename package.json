@@ -1,6 +1,6 @@
 {
   "name": "connect-refrain",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Refrain middleware for connect.",
   "keywords": [
     "refrain",
@@ -13,7 +13,7 @@
   "author": "shootaroo <shotaro.tsubouchi@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/shootaroo/connect-refrain.git"
+    "url": "https://github.com/shootaroo/connect-refrain.git"
   },
   "dependencies": {
     "refrain": "^0.0.3"
