@@ -1,6 +1,6 @@
 {
   "name": "connect-refrain",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Refrain middleware for connect.",
   "keywords": [
     "refrain",
