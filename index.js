@@ -6,6 +6,9 @@ module.exports = function (options) {
     if (!file) return next();
     refrain.render(file, null, function (err, output) {
       if (err) return next(err);
+      if (file.indexOf('.css') > 0) { //TODO
+        res.setHeader('Content-Type', 'text/css');
+      }
       res.end(output);
     });
   };
