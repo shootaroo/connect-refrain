@@ -1,13 +1,17 @@
 'use strict';
+var path = require('path');
+var mime = require('mime');
+
 module.exports = function (options) {
   var refrain = require('refrain')(options);
   return function (req, res, next) {
-    var file = refrain.find(req._parsedUrl ? req._parsedUrl.pathname : req.url);
+    var url = req._parsedUrl ? req._parsedUrl.pathname : req.url;
+    var file = refrain.find(url);
     if (!file) return next();
     refrain.render(file, null, function (err, output) {
       if (err) return next(err);
-      if (file.indexOf('.css') > 0) { //TODO
-        res.setHeader('Content-Type', 'text/css');
+      if (path.extname(url) !== '') {
+        res.setHeader('Content-Type', mime.lookup(url));
       }
       res.end(output);
     });

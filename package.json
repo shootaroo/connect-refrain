@@ -19,6 +19,7 @@
     "index.js"
   ],
   "dependencies": {
+    "mime": "^1.3.4",
     "refrain": "^0.2.0"
   }
 }
